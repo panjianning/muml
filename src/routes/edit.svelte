@@ -45,12 +45,12 @@
 	const tabs: Tab[] = [
 		{
 			id: 'code',
-			title: 'Code',
+			title: '代码',
 			icon: 'fas fa-code'
 		},
 		{
 			id: 'config',
-			title: 'Config',
+			title: '配置',
 			icon: 'fas fa-cogs'
 		}
 	];
@@ -125,7 +125,7 @@
 	<Navbar />
 	<div class="flex-1 flex overflow-hidden">
 		<div class="hidden md:flex flex-col" id="editorPane" style="width: 40%">
-			<Card on:select={tabSelectHandler} {tabs} isCloseable={false} title="Mermaid">
+			<Card on:select={tabSelectHandler} {tabs} isCloseable={false} title="">
 				<div slot="actions">
 					<div class="flex flex-row items-center">
 						{#if !$codeStore.autoSync}
@@ -143,7 +143,7 @@
 									class="toggle toggle-primary mr-1"
 									id="autoSync"
 									bind:checked={$codeStore.autoSync} />
-								<span> Auto sync</span>
+								<span>自动同步</span>
 							</label>
 						</div>
 					</div>
@@ -160,12 +160,12 @@
 		</div>
 		<div id="resizeHandler" class="hidden md:block" />
 		<div class="flex-1 flex flex-col overflow-hidden">
-			<Card title="Diagram" isCloseable={false}>
+			<Card title="预览" isCloseable={false}>
 				<button
 					slot="actions"
 					class="btn btn-primary btn-xs shadow-lg"
-					title="View diagram in new page"
-					on:click|stopPropagation={() => viewDiagram()}><i class="far fa-eye mr-2" /> View</button>
+					title="在新标签中打开此图"
+					on:click|stopPropagation={() => viewDiagram()}><i class="far fa-eye mr-2" /> 查看</button>
 
 				<div class="flex-1 overflow-auto">
 					<View />

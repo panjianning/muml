@@ -3,7 +3,7 @@ export const get = (): { body: unknown } => {
 	return {
 		body: {
 			short_name: 'Mermaid',
-			name: 'Mermaid Live Editor',
+			name: 'Mermaid 在线编辑器',
 			icons: [
 				{
 					src: `${base}/icon-192.png`,
@@ -21,7 +21,7 @@ export const get = (): { body: unknown } => {
 			display: 'standalone',
 			scope: `${base}/edit/`,
 			theme_color: '#6366F1',
-			description: 'FlowChart & Diagrams Editor.',
+			description: '流程图 和 图表 编辑器.',
 			orientation: 'landscape'
 		}
 	};

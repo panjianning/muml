@@ -3,19 +3,19 @@
 	import Card from '$lib/components/card/card.svelte';
 
 	const samples = {
-		'Flow Chart': `graph TD
+		流程图: `graph TD
     A[Christmas] -->|Get money| B(Go shopping)
     B --> C{Let me think}
     C -->|One| D[Laptop]
     C -->|Two| E[iPhone]
     C -->|Three| F[fa:fa-car Car]`,
-		'Sequence Diagram': `sequenceDiagram
+		' 时序图': `sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
     John-->>-Alice: Hi Alice, I can hear you!
     John-->>-Alice: I feel great!
             `,
-		'Class Diagram': `classDiagram
+		类图: `classDiagram
     Animal <|-- Duck
     Animal <|-- Fish
     Animal <|-- Zebra
@@ -37,7 +37,7 @@
       +run()
     }
             `,
-		'State Diagram': `stateDiagram-v2
+		状态图: `stateDiagram-v2
     [*] --> Still
     Still --> [*]
     Still --> Moving
@@ -45,7 +45,7 @@
     Moving --> Crash
     Crash --> [*]
             `,
-		'Gantt Chart': `gantt
+		甘特图: `gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
@@ -55,12 +55,12 @@
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
             `,
-		'Pie Chart': `pie title Pets adopted by volunteers
+		扇形图: `pie title Pets adopted by volunteers
     "Dogs" : 386
     "Cats" : 85
     "Rats" : 15
             `,
-		'ER Diagram': `erDiagram
+		ER图: `erDiagram
           CUSTOMER }|..|{ DELIVERY-ADDRESS : has
           CUSTOMER ||--o{ ORDER : places
           CUSTOMER ||--o{ INVOICE : "liable for"
@@ -70,7 +70,7 @@
           PRODUCT-CATEGORY ||--|{ PRODUCT : contains
           PRODUCT ||--o{ ORDER-ITEM : "ordered in"
             `,
-		'User Journey': `  journey
+		计划图: `  journey
     title My working day
     section Go to work
       Make tea: 5: Me
@@ -87,7 +87,7 @@
 	};
 </script>
 
-<Card title="Sample Diagrams" isOpen={false}>
+<Card title="模板" isOpen={false}>
 	<div class="flex gap-2 flex-wrap p-2">
 		{#each Object.keys(samples) as sample}
 			<button class="btn btn-primary normal-case btn-sm" on:click={() => loadSampleDiagram(sample)}

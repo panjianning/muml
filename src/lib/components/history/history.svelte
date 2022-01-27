@@ -22,12 +22,12 @@
 	let tabs: Tab[] = [
 		{
 			id: 'manual',
-			title: 'Saved',
+			title: '已保存',
 			icon: 'far fa-bookmark'
 		},
 		{
 			id: 'auto',
-			title: 'Timeline',
+			title: '时间轴',
 			icon: 'fas fa-history'
 		}
 	];
@@ -86,19 +86,19 @@
 	let isOpen = false;
 </script>
 
-<Card on:select={tabSelectHandler} bind:isOpen {tabs} title="History">
+<Card on:select={tabSelectHandler} bind:isOpen {tabs} title="历史">
 	<div slot="actions">
 		<button
 			id="saveHistory"
 			class="btn btn-xs btn-success w-12"
 			on:click|stopPropagation={() => saveHistory()}
-			title="Save current state"><i class="far fa-save" /></button>
+			title="保存当前状态"><i class="far fa-save" /></button>
 		{#if $historyModeStore !== 'loader'}
 			<button
 				id="clearHistory"
 				class="btn btn-xs btn-error w-12"
 				on:click|stopPropagation={() => clearHistory()}
-				title="Delete all saved states"><i class="fas fa-trash-alt" /></button>
+				title="删除所有已保存的状态"><i class="fas fa-trash-alt" /></button>
 		{/if}
 	</div>
 	<ul class="p-2 space-y-2 overflow-auto h-56" id="historyList">
@@ -122,10 +122,10 @@
 						</div>
 						<div class="flex gap-2 content-center">
 							<button class="btn btn-success" on:click={() => restoreHistory(state)}
-								><i class="fas fa-undo mr-1" />Restore</button>
+								><i class="fas fa-undo mr-1" />恢复</button>
 							{#if type !== 'loader'}
 								<button class="btn btn-error" on:click={() => clearHistory(time)}
-									><i class="fas fa-trash-alt mr-1" />Delete</button>
+									><i class="fas fa-trash-alt mr-1" />删除</button>
 							{/if}
 						</div>
 					</div>
@@ -133,9 +133,9 @@
 			{/each}
 		{:else}
 			<div class="m-2">
-				No items in History<br />
-				Click the Save button to save current state and restore it later.<br />
-				Timeline will automatically be saved every minute.
+				当前历史记录为空<br />
+				点击保存按钮将当前状态保存在本地，之后可以点击恢复按钮来恢复它。<br />
+				时间轴中会每分钟自动保存状态。
 			</div>
 		{/if}
 	</ul>

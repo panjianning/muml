@@ -16,24 +16,16 @@
 	}
 	const links: Link[] = [
 		{
-			title: 'Documentation',
+			title: '文档',
 			href: 'https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted'
 		},
 		{
-			title: 'Tutorial',
-			href: 'https://github.com/mermaid-js/mermaid/blob/develop/docs/Tutorials.md'
-		},
-		{
-			title: 'Mermaid',
-			href: 'https://github.com/mermaid-js/mermaid'
-		},
-		{
-			title: 'CLI',
-			href: 'https://github.com/mermaid-js/mermaid-cli'
+			title: 'SVG编辑器',
+			href: 'https://panjianning.com/svgeditor'
 		},
 		{
 			title: '',
-			href: 'https://github.com/mermaid-js/mermaid-live-editor',
+			href: 'https://github.com/panjianning/muml',
 			icon: 'fab fa-github fa-lg'
 		}
 	];
@@ -42,7 +34,7 @@
 <div class="navbar mb-2 shadow-lg bg-primary">
 	<div class="flex-1 px-2 mx-2">
 		<span class="text-lg font-bold">
-			<a href="/">Mermaid<span class="text-xs font-thin">v{version}</span> Live Editor</a>
+			<a href="/">Mermaid 在线编辑器</a>
 		</span>
 	</div>
 	<label for="menu-toggle" class="pointer-cursor lg:hidden block"

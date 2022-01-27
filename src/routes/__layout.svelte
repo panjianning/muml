@@ -25,7 +25,7 @@
 		const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 		if ($themeStore.theme === undefined) {
-			setTheme(isDarkMode ? 'dark' : 'light');
+			setTheme(isDarkMode ? 'dark' : 'bumblebee');
 		}
 
 		themeStore.subscribe(({ theme, isDark }) => {

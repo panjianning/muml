@@ -1,5 +1,7 @@
 # Mermaid 在线编辑器
 
+[在线运行](https://www.panjianning.com/muml)
+
 ## 静态部署
 
 ```shell

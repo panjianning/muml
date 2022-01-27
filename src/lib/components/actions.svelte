@@ -147,13 +147,8 @@
 	});
 </script>
 
-<Card title="Actions" isOpen={true}>
+<Card title="操作" isOpen={true}>
 	<div class="flex flex-wrap gap-2 m-2">
-		{#if isClipboardAvailable()}
-			<button class="action-btn w-full" on:click={onCopyClipboard}
-				><i class="far fa-copy mr-2" /> Copy Image to clipboard
-			</button>
-		{/if}
 		<button class="action-btn flex-auto" on:click={onDownloadPNG}>
 			<i class="fas fa-download mr-2" /> PNG
 		</button>
@@ -171,17 +166,17 @@
 		</button>
 
 		<div class="flex gap-2 items-center">
-			PNG size
+			PNG大小
 			<label for="autosize">
-				<input type="radio" value="auto" id="autosize" bind:group={imagemodeselected} /> Auto
+				<input type="radio" value="auto" id="autosize" bind:group={imagemodeselected} /> 自动
 			</label>
 
 			<label for="width">
-				<input type="radio" value="width" id="width" bind:group={imagemodeselected} /> Width
+				<input type="radio" value="width" id="width" bind:group={imagemodeselected} /> 宽度
 			</label>
 
 			<label for="height">
-				<input type="radio" value="height" id="height" bind:group={imagemodeselected} /> Height
+				<input type="radio" value="height" id="height" bind:group={imagemodeselected} /> 高度
 			</label>
 
 			{#if imagemodeselected !== 'auto'}
@@ -199,20 +194,15 @@
 			<input class="input" id="markdown" type="text" value={mdCode} on:click={onCopyMarkdown} />
 			<label for="markdown">
 				<button class="btn btn-primary btn-md flex-auto" on:click={onCopyMarkdown}>
-					Copy Markdown
+					复制Markdown
 				</button>
 			</label>
 		</div>
 
 		<div class="w-full flex gap-2 items-center">
-			<input
-				class="input"
-				id="gist"
-				type="text"
-				bind:value={gistURL}
-				placeholder="Enter Gist URL" />
+			<input class="input" id="gist" type="text" bind:value={gistURL} placeholder="输入 Gist URL" />
 			<label for="gist">
-				<button class="btn btn-primary btn-md flex-auto" on:click={loadGist}> Load Gist </button>
+				<button class="btn btn-primary btn-md flex-auto" on:click={loadGist}> 加载 Gist </button>
 			</label>
 		</div>
 		{#if isNetlify}

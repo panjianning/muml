@@ -12,11 +12,11 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({
-			pages: `docs${process.env['BETA'] ? '/beta' : ''}`
+			pages: `dist${process.env['BETA'] ? '/beta' : ''}`
 		}),
 		paths: process.env['DEPLOY']
 			? {
-					base: `/mermaid-live-editor${process.env['BETA'] ? '/beta' : ''}`
+					base: `/muml${process.env['BETA'] ? '/beta' : ''}`
 			  }
 			: {},
 		// hydrate the <div id="svelte"> element in src/app.html

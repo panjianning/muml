@@ -20,8 +20,12 @@
 			href: 'https://mermaid-js.github.io/mermaid/#/n00b-gettingStarted'
 		},
 		{
+			title: 'PlantUML编辑器',
+			href: 'https://panjianning.com/puml/'
+		},
+		{
 			title: 'SVG编辑器',
-			href: 'https://panjianning.com/svgeditor'
+			href: 'https://panjianning.com/svgeditor/'
 		},
 		{
 			title: '',
